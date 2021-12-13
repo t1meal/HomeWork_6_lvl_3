@@ -1,12 +1,20 @@
 package gb.Server;
 
+
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Vector;
 
 public class ServMain {
-    private Vector <ClientHandler> clients;
+    private final Vector <ClientHandler> clients;
+    private final static Logger logger = LogManager.getLogger();
+
 
     public ServMain() {
         Socket socket = null;
@@ -16,13 +24,15 @@ public class ServMain {
         try  {
             AuthService.connectDB();
             serv = new ServerSocket(8990);
-            System.out.println("Server is running!");
+//            System.out.println("Server is running!");
+            logger.info("Server is running!");
 
             while (true){
                 socket = serv.accept();
-                System.out.println("Client has connect!");
+//                System.out.println("Client has connect!");
+                logger.info("Client has connect!");
 
-                new ClientHandler(this, socket);
+                new ClientHandler(this, socket, logger);
             }
 
         } catch (IOException e) {

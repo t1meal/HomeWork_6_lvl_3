@@ -1,5 +1,7 @@
 package gb.Server;
 
+import org.apache.logging.log4j.Logger;
+
 import java.io.*;
 import java.net.Socket;
 import java.util.ArrayList;
@@ -18,9 +20,10 @@ public class ClientHandler {
     File history;
     List<String> blacklist;
     ExecutorService executorService = Executors.newSingleThreadExecutor();
+    Logger logger;
 
 
-    public ClientHandler(ServMain serv, Socket socket) {
+    public ClientHandler(ServMain serv, Socket socket, Logger logger) {
 
         try {
             this.serv = serv;
@@ -29,6 +32,7 @@ public class ClientHandler {
             this.out = new DataOutputStream(socket.getOutputStream());
             this.blacklist = new ArrayList<>();
             this.history = new File("history_" + this.nick + ".txt");
+            this.logger = logger;
 
 
             executorService.execute(() -> {
@@ -62,7 +66,8 @@ public class ClientHandler {
                             if (str.startsWith("/")) {
                                 if (str.equals("/end")) {
                                     out.writeUTF("/clientIsClosed");
-                                    System.out.println("Client is disconnect!");
+//                                    System.out.println("Client is disconnect!");
+                                    logger.info("Client is disconnect!");
                                     break;
                                 }
                                 if (str.startsWith("/w ")) { // /w nick3 lsdfhldf sdkfjhsdf wkerhwr
@@ -78,9 +83,11 @@ public class ClientHandler {
                             } else {
                                 serv.broadcastMsg(ClientHandler.this, nick + ": " + str);
                             }
-                            System.out.println("Client: " + str);
+//                            System.out.println("Client: " + str);
+                            logger.info("Client: " + str);
                         } catch (IOException e) {
-                            System.out.println("Client is disconnected!");
+//                            System.out.println("Client is disconnected!");
+                            logger.info("Client is disconnect!");
                             return;
                         }
                     }

@@ -1,0 +1,26 @@
+INFO  2021-12-13 21:14:50 [main] gb.Server.ServMain (ServMain.java:28) - Server is running!
+INFO  2021-12-13 21:15:16 [main] gb.Server.ServMain (ServMain.java:33) - Client has connect!
+INFO  2021-12-13 21:17:08 [main] gb.Server.ServMain (ServMain.java:28) - Server is running!
+INFO  2021-12-13 21:17:23 [main] gb.Server.ServMain (ServMain.java:33) - Client has connect!
+INFO  2021-12-13 21:23:39 [main] gb.Server.ServMain (ServMain.java:28) - Server is running!
+INFO  2021-12-13 21:23:57 [main] gb.Server.ServMain (ServMain.java:33) - Client has connect!
+INFO  2021-12-13 21:25:09 [main] gb.Server.ServMain (ServMain.java:28) - Server is running!
+INFO  2021-12-13 21:25:21 [main] gb.Server.ServMain (ServMain.java:33) - Client has connect!
+INFO  2021-12-13 21:25:23 [pool-2-thread-1] gb.Server.ClientHandler (ClientHandler.java:87) - Client: fdsgdf
+INFO  2021-12-13 21:25:28 [pool-2-thread-1] gb.Server.ClientHandler (ClientHandler.java:87) - Client: dfgdf
+INFO  2021-12-13 21:25:29 [pool-2-thread-1] gb.Server.ClientHandler (ClientHandler.java:87) - Client: dfgdf
+INFO  2021-12-13 21:25:30 [pool-2-thread-1] gb.Server.ClientHandler (ClientHandler.java:87) - Client: dfg
+INFO  2021-12-13 21:25:32 [pool-2-thread-1] gb.Server.ClientHandler (ClientHandler.java:87) - Client: gdfg
+INFO  2021-12-13 21:25:33 [pool-2-thread-1] gb.Server.ClientHandler (ClientHandler.java:87) - Client: dfg
+INFO  2021-12-13 21:25:34 [pool-2-thread-1] gb.Server.ClientHandler (ClientHandler.java:87) - Client: dfg
+INFO  2021-12-13 21:25:35 [pool-2-thread-1] gb.Server.ClientHandler (ClientHandler.java:87) - Client: dfg
+INFO  2021-12-13 21:25:48 [main] gb.Server.ServMain (ServMain.java:33) - Client has connect!
+INFO  2021-12-13 21:25:53 [pool-2-thread-1] gb.Server.ClientHandler (ClientHandler.java:87) - Client: dfgdf
+INFO  2021-12-13 21:25:56 [pool-2-thread-1] gb.Server.ClientHandler (ClientHandler.java:87) - Client: gdfgdf
+INFO  2021-12-13 21:25:58 [pool-3-thread-1] gb.Server.ClientHandler (ClientHandler.java:87) - Client: gdfg
+INFO  2021-12-13 21:26:00 [pool-3-thread-1] gb.Server.ClientHandler (ClientHandler.java:87) - Client: dfgdf
+INFO  2021-12-13 21:26:01 [pool-3-thread-1] gb.Server.ClientHandler (ClientHandler.java:87) - Client: dfg
+INFO  2021-12-13 21:26:02 [pool-3-thread-1] gb.Server.ClientHandler (ClientHandler.java:87) - Client: dfg
+INFO  2021-12-13 21:26:03 [pool-3-thread-1] gb.Server.ClientHandler (ClientHandler.java:87) - Client: dfg
+INFO  2021-12-13 21:26:07 [pool-3-thread-1] gb.Server.ClientHandler (ClientHandler.java:90) - Client is disconnect!
+INFO  2021-12-13 21:26:11 [pool-2-thread-1] gb.Server.ClientHandler (ClientHandler.java:90) - Client is disconnect!

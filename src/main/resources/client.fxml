@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<VBox fx:id="vbox" alignment="center" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="gb.Client.Controller">
+
+    <HBox fx:id="upperPanel">
+        <TextField HBox.hgrow="ALWAYS" promptText="Login" fx:id="loginField" />
+        <PasswordField promptText="Password" fx:id="passwordField" onAction="#tryToAuth"/>
+        <Button text="LogIn" onAction="#tryToAuth"/>
+    </HBox>
+
+
+    <TextArea fx:id="textArea" editable="false" wrapText="true" VBox.vgrow="ALWAYS" />
+    <HBox fx:id="bottomPanel" managed="false" visible="false">
+        <TextField fx:id="textField" onAction="#sendMsgApp" promptText="You message...." HBox.hgrow="ALWAYS" />
+        <Button fx:id="sendButton" onAction="#sendMsgApp" text="Send" />
+    </HBox>
+</VBox>

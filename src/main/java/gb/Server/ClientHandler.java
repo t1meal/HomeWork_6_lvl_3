@@ -1,5 +1,6 @@
 package gb.Server;
 
+import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.io.*;
@@ -13,17 +14,17 @@ import java.util.concurrent.TimeUnit;
 
 public class ClientHandler {
     private ServMain serv;
-    private Socket socket;
-    String nick;
+    private String nick;
+    Socket socket;
     DataInputStream in;
     DataOutputStream out;
     File history;
-    List<String> blacklist;
-    ExecutorService executorService = Executors.newSingleThreadExecutor();
-    Logger logger;
+    private List<String> blacklist;
+    private ExecutorService executorService = Executors.newSingleThreadExecutor();
+    private Logger logger;
 
 
-    public ClientHandler(ServMain serv, Socket socket, Logger logger) {
+    public ClientHandler(ServMain serv, Socket socket) {
 
         try {
             this.serv = serv;
@@ -32,7 +33,8 @@ public class ClientHandler {
             this.out = new DataOutputStream(socket.getOutputStream());
             this.blacklist = new ArrayList<>();
             this.history = new File("history_" + this.nick + ".txt");
-            this.logger = logger;
+            this.logger = LogManager.getLogger();
+
 
 
             executorService.execute(() -> {

@@ -32,7 +32,7 @@ public class ServMain {
 //                System.out.println("Client has connect!");
                 logger.info("Client has connect!");
 
-                new ClientHandler(this, socket, logger);
+                new ClientHandler(this, socket);
             }
 
         } catch (IOException e) {

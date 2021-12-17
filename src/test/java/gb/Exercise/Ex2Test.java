@@ -3,12 +3,37 @@ package gb.Exercise;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
 
 import static org.junit.Assert.*;
-
+//@RunWith(value = Parameterized.class)
 public class Ex2Test {
 
     private static Ex2 ex2;
+//    private Integer [] x1;
+//    private Integer [] x2;
+//    private Integer [] x3;
+
+//    public Ex2Test(Integer[] x1, Integer[] x2, Integer[] x3) {
+//        this.x1 = x1;
+//        this.x2 = x2;
+//        this.x3 = x3;
+//    }
+
+//    @Parameterized.Parameters
+//    public static Collection data(){
+//        return Arrays.asList(new Object[][]{
+//                {1, 2, 4 , 4 ,2, 3, 1, 1, 7},
+//                {1, 2, 4 , 4 ,2, 4, 1, 1, 7},
+//                {1, 4, 1 , 1 ,2, 3, 1, 1, 7}
+//        });
+//    }
+
 
     @BeforeClass
     public static void init () {
